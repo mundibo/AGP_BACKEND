@@ -1,0 +1,23 @@
+{
+  "name": "com.fpune.agp",
+  "version": "1.0.0",
+  "description": "Aplicativo para gestión de personas",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mundibo/AGP_BACKEND.git"
+  },
+  "keywords": [
+    "colaborador",
+    "empresa"
+  ],
+  "author": "Fernanda Bogado",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mundibo/AGP_BACKEND/issues"
+  },
+  "homepage": "https://github.com/mundibo/AGP_BACKEND#readme"
+}
