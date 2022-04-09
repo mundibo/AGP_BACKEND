@@ -38,13 +38,6 @@ const listFilter = async (query, pageStart = 1, pageLimit = 10) => {
 
 };
 
-
-
-
-
-
-
-// Buscar en la base de datos por codigo
 const getById = async (codigo) => {
     const colaboradorModelResult = await ColaboradorModel.findByPk(codigo);
 
@@ -56,8 +49,6 @@ const getById = async (codigo) => {
         return null;
     }
 };
-
-//Guardar data en la base de datos
 const create = async (data) => {
     console.log("create data", data);
 
@@ -72,7 +63,7 @@ const create = async (data) => {
     return data;
 };
 
-//Actualizar datos en la base de datos
+
 const update = async (data) => {
     console.log("update data", data);
 
@@ -89,11 +80,6 @@ const update = async (data) => {
         return null;
     }
 };
-
-
-
-//Eliminar datos en la base de datos
-
 const remove = async (col_codigo) => {
     console.log("borrar codigo", col_codigo);
 
@@ -108,14 +94,7 @@ const remove = async (col_codigo) => {
     } else {
         return false;
     }
-
-
-
-
-
-
 };
-
 module.exports = {
     list,
     listFilter,
