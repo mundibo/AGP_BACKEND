@@ -8,8 +8,10 @@ app.use(cors());
 app.use(bodyparser());
 
 
-require("./src/routes/colaborador.route")(app);
+require("./src/routes/colaborador.routes")(app);
 require("./src/routes/valor.routes")(app);
+require("./src/routes/reconocimiento.routes")(app);
 
+require("./src/routes/usuario.routes")(app);
 
 app.listen(3000);

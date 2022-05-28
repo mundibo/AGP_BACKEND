@@ -31,11 +31,11 @@ const ColaboradorModel = sequelize.define(
           allowNull: false,
         },
       col_genero: {
-        type: DataTypes.CHAR,
+        type: DataTypes.STRING,
         allowNull: false,
       },
       col_sector: {
-        type: DataTypes.CHAR,
+        type: DataTypes.STRING,
         allowNull: false,
       },
     

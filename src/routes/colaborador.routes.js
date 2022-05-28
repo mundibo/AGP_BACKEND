@@ -8,12 +8,12 @@ app.get('/colaboradores', colaboradorController.list);
 
 app.get('/colaboradores-filter', colaboradorController.listFilter);
 // Ejemplo de peticion con queryparams
-app.get('/colaborador/find/:id', colaboradorController.getById);
+app.get('/colaboradores/find/:id', colaboradorController.getById);
 
-app.post('/colaborador/create', colaboradorController.create);
+app.post('/colaboradores/create', colaboradorController.create);
 
-app.put('/colaborador/update', colaboradorController.update);
+app.put('/colaboradores/update', colaboradorController.update);
 
-app.delete('/colaborador/remove/:id', colaboradorController.remove);
+app.delete('/colaboradores/remove/:id', colaboradorController.remove);
 
 }
