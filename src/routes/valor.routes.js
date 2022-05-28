@@ -8,12 +8,12 @@ app.get('/valores', valorController.list);
 
 app.get('/valores-filter', valorController.listFilter);
 // Ejemplo de peticion con queryparams
-app.get('/valor/find/:id', valorController.getById);
+app.get('/valores/find/:id', valorController.getById);
 
-app.post('/valor/create', valorController.create);
+app.post('/valores/create', valorController.create);
 
-app.put('/valor/update', valorController.update);
+app.put('/valores/update', valorController.update);
 
-app.delete('/valor/remove/:id', valorController.remove);
+app.delete('/valores/remove/:id', valorController.remove);
 
 }
