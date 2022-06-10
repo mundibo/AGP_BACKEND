@@ -20,5 +20,5 @@ require("./src/routes/valor.routes")(app);
 require("./src/routes/reconocimiento.routes")(app);
 require("./src/routes/usuario.routes")(app);
 require("./src/routes/reunion.routes")(app);
-
+require("./src/routes/clasificador.routes")(app);
 app.listen(3000);
