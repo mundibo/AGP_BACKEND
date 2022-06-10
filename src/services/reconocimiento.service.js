@@ -28,18 +28,37 @@ const list = async () => {
     on v.val_codigo = re_codval
     ORDER BY re_codigo`;
 
-
-
-
-
     const ReconocimientoModelResults = await sequelize.query(sql);
-   
 
     if (ReconocimientoModelResults) {
       return ReconocimientoModelResults[0]
     } else {
       return null;
     }
+  };
+  
+//filtro
+const listFilter = async (query, pageStart = 1, pageLimit = 10) => {
+    let reconocimientosResult = await sequelize.query(
+      `select r.*,c.col_nombre_apellido as nombre, v.val_nombre as valor   
+      from reconocimiento as r 
+      inner join colaborador as c
+      on c.col_codigo = re_codcol
+      inner join valor as v
+      on v.val_codigo = re_codval
+       WHERE UPPER(c.col_nombre_apellido) LIKE :q`,
+      {
+        replacements: {
+          q: query ? "%" + query.toUpperCase() + "%" : "%",
+        },
+        //type:QueryTypes.SELEC
+      }
+    );
+  
+    reconocimientosResult = reconocimientosResult && reconocimientosResult[0] ? reconocimientosResult[0] : [];
+  
+    console.log("reconocimientosResult", reconocimientosResult);
+    return reconocimientosResult;
   };
 
 
@@ -78,6 +97,6 @@ const update = async (data) => {
     
 module.exports = {
    
-    create, getById, list, update
+    create, getById, list, update,listFilter
     
 };

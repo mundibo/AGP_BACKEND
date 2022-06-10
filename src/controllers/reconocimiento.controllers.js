@@ -29,6 +29,13 @@ const list = async (req, res)=> {
       }
     );
   }
+  const listFilter = async (req, res) => {
+   console.log("entro")
+    const reconocimientos = await reconocimientoService.listFilter(req.query.q);
+  
+    res.send({ success: true, reconocimientos });
+  };
+  
 
   const update = async (req, res)=> {
     const reconocimiento = await reconocimientoService.update(req.body);
@@ -38,10 +45,12 @@ const list = async (req, res)=> {
   );
 }
 
+
 module.exports={
     create,
     getById, 
     list, 
-    update
+    update,
+    listFilter
 
 };

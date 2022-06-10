@@ -1,4 +1,5 @@
 const usuarioController = require('../controllers/usuario.controllers');
+const { authorization } = require('../middleware/authorization.middleware');
 
 module.exports = (app) =>{
 
